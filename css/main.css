@@ -1,0 +1,119 @@
+:root {
+    --clr-primary-200 : #F3EED9;/* light */
+    --clr-primary-400 : #824936;/* accent */
+
+    --clr-neutral-100 : #FFF;/* basic white */
+    --clr-neutral-900 : #222C2A;/* dark */
+
+    /* Fonts  */
+    --ff-primary : 'Roboto', sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+    color: var(--clr-primary-400);
+    margin:0;
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--ff-accent);
+    font-weight:900;
+    line-height: 1;
+}
+/* utility classes */
+.text-light{
+    color: var(--clr-primary-200);
+}
+.text-neutral{
+    color: var(--clr-neutral-100);
+}
+.text-dark{
+    color: var(--clr-neutral-900)
+}
+.text-size{
+    font-size:1rem;
+}
+
+
+/* Layout related */
+h2,
+h3,
+p{
+    margin-bottom: 1em;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    /* means it cant exceed the 100% of its containers width which prevents it from overflowing off the window*/
+}
+
+header,
+section{
+    padding: 3em 0;
+}
+@media (min-width:40rem) {
+    header,
+    section{
+        padding: 5em 0;
+    }   
+}
+
+.container--narrow{
+    max-width: 34rem;
+}
+.container{
+    margin-inline: auto;/* Means margin for left and right only */
+    width: min(90%,70.5rem);
+}
+
+.split{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width : 40rem) {
+    .split{
+        flex-direction: row;
+    }
+    .split > *{/*Selects all direct childrens of split class*/
+        flex-basis: 100% ;
+    }
+    .split > * + *{/*Selects all the siblings of the left container,
+        and if no sibling of the left container then wont select anything
+        */
+        margin-left:2em ;
+    }
+}
+
+/* utility classes */
+.bg-light{
+    background-color: var(--clr-primary-200);
+}
+.bg-dark{
+    background-color: var(--clr-neutral-900);
+}
+.bg-accent{
+    background-color: var(--clr-primary-400);
+}
+.text-center{
+    text-align: center;
+}
