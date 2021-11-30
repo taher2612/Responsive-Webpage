@@ -1,2 +1,2 @@
 # Just a test repository 
-For my own testing to understand and to learn git
+For my own understanding and to learn git
