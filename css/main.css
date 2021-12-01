@@ -8,6 +8,7 @@
     /* Fonts  */
     --ff-primary : 'Roboto', sans-serif;
     --ff-accent: 'Playfair Display', serif;
+    --ff-orignal: 'Times New Roman', sans-serif;
 }
 *,
 *::before,
@@ -29,6 +30,7 @@ h3,
 p{
     color: var(--clr-primary-400);
     margin:0;
+    background-color: #824936;
 }
 
 h1,
