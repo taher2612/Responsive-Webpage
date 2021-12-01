@@ -53,13 +53,12 @@ h3{
 .text-size{
     font-size:1rem;
 }
-
-
 /* Layout related */
 h2,
 h3,
 p{
     margin-bottom: 1em;
+    margin-top : .5em;
 }
 
 img{
